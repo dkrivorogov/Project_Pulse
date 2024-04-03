@@ -67,7 +67,7 @@ $(document).ready(function(){
                 phone: "required",
                 email: {
                     required: true,
-                    email: true
+                email: true
                 }
             },
             messages: {
