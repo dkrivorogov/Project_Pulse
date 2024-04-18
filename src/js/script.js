@@ -91,7 +91,7 @@ $(document).ready(function(){
     $('input[name=phone]').mask("+7 (999) 999-99-99");
 
     // отправка данных форм на локальый хостинг
-    $("form").submit(function(e){
+    $('form').submit(function(e){
         e.preventDefault();
         if(!$(this).valid()){
             return;
@@ -102,6 +102,11 @@ $(document).ready(function(){
             data:$(this).serialize()
         }).done(function(){
             $(this).find("input").val("");
-        }) 
-    })
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
 }); 
