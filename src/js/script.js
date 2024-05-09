@@ -110,7 +110,7 @@ $(document).ready(function(){
         return false;
     });
 
-    //появлекние кнопки pageup на данном отступе 1600px
+    //появлекние кнопки pageup на заданном отступе
     $(window).scroll(function() {
         if ($(this).scrollTop() > 1600) {
             $('.pageup').fadeIn();
@@ -118,12 +118,10 @@ $(document).ready(function(){
             $('.pageup').fadeOut();
         }
     });
-    // плавный переход к якорю
-    $("a[href^='#']").on("click", function() {
-        const _href = $(this).attr("href");    
-        $("html, body").animate({
-            scrollTop: $(href).offset().top+"px"
-        });    
+    // плавный переход к якорю _href
+    $("a[data-smooth-scroll]").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;
     });
 }); 

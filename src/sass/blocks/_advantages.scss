@@ -8,14 +8,13 @@
         margin-top: 65px;
     }
     &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 247px;
     }
-    &__icon {
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 38px;
-    }
-    &__subheader {        
+    &__subheader {
+        margin-top: 38px;        
         font-size: 18px;        
         font-weight: 700;
         color: #0d0d0d;
@@ -24,6 +23,7 @@
     &__descr {
         font-size: 14px;
         font-weight: 300;
+        line-height: 1.2;
         color: #0d0d0d;
         text-align: center;
         margin-top: 26px;
@@ -31,6 +31,14 @@
             text-decoration: underline;
             color: #ff0000;
             text-transform: uppercase;
+        }
+    }
+    &__icon {
+        &_animated {
+            animation: heartbeat 1.5s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
         }
     }    
   
