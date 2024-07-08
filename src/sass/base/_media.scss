@@ -80,10 +80,7 @@
     }
     .catalog-item {
         margin-right: 20px;
-    }
-    .pageup__none {
-        display: none;
-    }    
+    }   
 }
 
 @media (max-width: 767px) {  
@@ -175,7 +172,10 @@
             font-size: 17px;
             line-height: 17px;
         }
-    }  
+    }
+    .pageup__none {
+        display: none;
+    }   
 }
 
 @media (max-width: 575px) {
